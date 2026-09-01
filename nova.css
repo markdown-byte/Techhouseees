@@ -62,10 +62,10 @@ html, body {
   color: var(--accent-primary);
 }
 
-/* Category Filters (Minimalist) */
+/* Category Filters (Minimalist Dark) */
 .category-filters-section {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .category-filters {
   display: flex;
@@ -76,8 +76,8 @@ html, body {
   padding: 16px 0;
 }
 .filter-btn {
-  background: transparent;
-  border: 1px solid rgba(0,0,0,0.1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
   padding: 8px 20px;
   border-radius: 30px;
@@ -91,20 +91,29 @@ html, body {
   color: var(--accent-primary);
 }
 .filter-btn.active {
-  background: var(--text-primary);
-  border-color: var(--text-primary);
-  color: #fff;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #000;
 }
 /* Product Card Updates */
 .product-card {
-  border: none;
-  background: transparent;
-  box-shadow: none;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-med);
+  padding: 12px;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-glow);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 .product-img-wrap {
   border-radius: var(--radius-lg);
-  background: #f4f5f7;
+  background: var(--bg-secondary);
   padding: 24px;
+  position: relative;
 }
 .wishlist-btn {
   position: absolute;
@@ -113,63 +122,87 @@ html, body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #fff;
-  border: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   color: var(--text-secondary);
   transition: all var(--transition-fast);
   z-index: 2;
 }
 .wishlist-btn:hover {
   color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 .product-badge {
-  background: #111;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border-radius: var(--radius-sm);
   font-size: 0.7rem;
   top: 12px;
   left: 12px;
+  position: absolute;
+  padding: 4px 8px;
+  z-index: 2;
 }
 .product-badge.sale {
   background: var(--accent-primary);
+  color: #000;
 }
 .product-info {
-  padding: 16px 0;
+  padding: 16px 0 0 0;
   text-align: left;
 }
 .product-name {
   font-weight: 700;
+  margin-bottom: 4px;
 }
 .product-rating {
   margin: 6px 0;
+  color: #fbbf24;
+}
+.product-rating .rating-count {
+  color: var(--text-muted);
 }
 .product-bottom {
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 12px;
 }
 .price-current {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
+  color: var(--accent-primary);
 }
-.btn-add-cart {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #111;
-  color: #fff;
-  padding: 0;
+.price-old {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+.btn-add-cart-wide {
+  width: 100%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.btn-add-cart:hover {
+.btn-add-cart-wide:hover {
   background: var(--accent-primary);
+  color: #000;
+  border-color: var(--accent-primary);
 }
+
 
 
 
@@ -240,4 +273,83 @@ html, body {
 .reveal-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================
+   ORAIMO-STYLE HERO (DARK)
+   ========================================= */
+.hero-dark {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.hero-dark-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero-dark-left {
+  flex: 1;
+  max-width: 600px;
+}
+.hero-dark-left .hero-badge {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-weight: 700;
+}
+.hero-dark-left .hero-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+.hero-dark-left .text-accent {
+  color: var(--accent-primary);
+}
+.hero-dark-left .hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.hero-dark-left .hero-actions {
+  display: flex;
+  margin-bottom: 48px;
+}
+.hero-dark-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero-dark-right .hero-floating-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(132, 204, 22, 0.2));
+}
+
+/* =========================================
+   DARK TRUST BAR
+   ========================================= */
+.dark-trust-bar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 30px 0;
 }

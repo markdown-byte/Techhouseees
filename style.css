@@ -4,23 +4,23 @@
 
 /* ---- CSS Custom Properties ---- */
 :root {
-  /* Colors - NovaTrend Theme */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9f9f9;
-  --bg-card: #ffffff;
-  --bg-card-hover: #ffffff;
+  /* Colors - Oraimo Tech Dark Theme */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
 
-  --accent-primary: #ea580c; /* Orange */
-  --accent-secondary: #000000;
+  --accent-primary: #84cc16; /* Oraimo Green */
+  --accent-secondary: #ffffff;
   
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
+  --text-primary: #f9fafb;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
 
-  --border-subtle: #e5e7eb;
-  --border-glow: transparent;
+  --border-subtle: #27272a;
+  --border-glow: rgba(132, 204, 22, 0.2);
 
-  --gradient-main: #ea580c;
+  --gradient-main: #84cc16;
   
   /* Spacing */
   --nav-height: 80px;
