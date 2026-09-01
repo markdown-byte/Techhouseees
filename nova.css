@@ -65,8 +65,13 @@ html, body {
 /* Category Cards */
 .category-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
+}
+@media (min-width: 768px) {
+  .category-cards {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
 }
 .cat-card {
   background: var(--bg-secondary);
@@ -290,7 +295,7 @@ html, body {
   .banner h2 { font-size: 1.8rem; }
   
   /* Responsive Fixes */
-  .intro-gallery { display: none; } /* Hide complex gallery on mobile to save space */
+  .hero-media { margin-top: 24px; }
   .hero-container { grid-template-columns: 1fr !important; text-align: center; }
   .hero-left { margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
   .hero-actions { justify-content: center; }
@@ -301,33 +306,25 @@ html, body {
 }
 
 /* =========================================
-   INTRO GALLERY & ENTRY ANIMATIONS
+   HERO MEDIA & ENTRY ANIMATIONS
    ========================================= */
 
-.intro-gallery {
-  display: flex;
-  gap: 16px;
-  min-height: 400px;
-  background: none !important;
-}
-
-.gallery-col {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-}
-
-.gallery-col-1 {
-  transform: translateY(20px);
-}
-
-.intro-img {
+.hero-media {
   width: 100%;
-  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-media video, .hero-media img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-height: 600px;
 }
 
 /* Entry Animations (Dekhla) */
