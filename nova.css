@@ -311,6 +311,8 @@ html, body {
 
 .hero-media {
   width: 100%;
+  aspect-ratio: 4/5;
+  max-height: 550px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -324,7 +326,6 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-height: 600px;
 }
 
 /* Entry Animations (Dekhla) */

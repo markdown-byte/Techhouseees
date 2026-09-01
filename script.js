@@ -280,31 +280,61 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================
-  // 6. CATEGORY FILTERING (Preserved & enhanced)
   // =========================================
-  const filterChips = document.querySelectorAll('.filter-chip');
+  // 6. CATEGORY FILTERING & WISHLIST
+  // =========================================
+  const categoryCards = document.querySelectorAll('.cat-card');
   const productCards = document.querySelectorAll('.product-card');
 
-  filterChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      // Update active state
-      filterChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-
-      const category = chip.getAttribute('data-category');
+  categoryCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = card.getAttribute('data-category');
 
       // Filter products
-      productCards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.classList.remove('hidden');
+      let found = false;
+      productCards.forEach(pCard => {
+        if (!category || category === 'all' || pCard.getAttribute('data-category') === category) {
+          pCard.classList.remove('hidden');
           // Re-trigger animation
-          card.style.animation = 'none';
-          card.offsetHeight; /* trigger reflow */
-          card.style.animation = null;
+          pCard.style.animation = 'none';
+          pCard.offsetHeight; /* trigger reflow */
+          pCard.style.animation = null;
+          found = true;
         } else {
-          card.classList.add('hidden');
+          pCard.classList.add('hidden');
         }
       });
+      
+      // Smooth scroll to products section
+      const productsSection = document.getElementById('produits');
+      if(productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      if(category) {
+        showToast(`Filtre appliqué : ${category.charAt(0).toUpperCase() + category.slice(1)}`);
+      }
+    });
+  });
+
+  // WISHLIST LOGIC
+  document.querySelectorAll('.wishlist-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const svg = btn.querySelector('svg');
+      const isLiked = btn.classList.toggle('active-wishlist');
+      
+      if (isLiked) {
+        svg.style.fill = 'var(--accent-primary)';
+        svg.style.color = 'var(--accent-primary)';
+        showToast('Ajouté aux favoris ! ❤️');
+      } else {
+        svg.style.fill = 'none';
+        svg.style.color = 'currentColor';
+        showToast('Retiré des favoris.');
+      }
     });
   });
   
