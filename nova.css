@@ -196,117 +196,92 @@ html, body {
   /* Old media query moved to end of file */
 
 /* =========================================
-   FULLSCREEN HERO
+   MINIMAL HERO
    ========================================= */
-
-.hero-fullscreen {
+.hero-minimal {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
-  margin-top: -80px; /* Offset navbar */
+  background-color: #f9fafb; /* Very light, clean background */
 }
 
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-}
-
-.hero-bg-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark elegant overlay */
-  z-index: -1;
-}
-
-.hero-content-center {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  color: #fff;
+.hero-minimal-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 0 24px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.hero-content-center .hero-badge {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.hero-minimal-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-minimal-left .hero-badge {
+  background: var(--accent-primary);
   color: #fff;
-  backdrop-filter: blur(10px);
   padding: 6px 16px;
   border-radius: 30px;
   font-size: 0.85rem;
   letter-spacing: 2px;
   margin-bottom: 24px;
+  display: inline-block;
+  font-weight: 700;
 }
 
-.hero-content-center .hero-title {
-  font-size: 4.5rem;
+.hero-minimal-left .hero-title {
+  font-size: 4rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: #fff;
+  color: #111;
 }
 
-.hero-content-center .hero-subtitle {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  opacity: 0.9;
-  color: #f3f4f6;
+.hero-minimal-left .hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #4b5563;
+  line-height: 1.6;
 }
 
-.hero-content-center .hero-actions {
+.hero-minimal-left .hero-actions {
   display: flex;
-  justify-content: center;
   margin-bottom: 48px;
 }
 
-.btn-glass {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(10px);
-  color: #fff !important;
-}
-
-.btn-glass:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  transform: translateY(-2px);
-}
-
-.hero-content-center .hero-social-proof {
+.hero-minimal-left .hero-social-proof {
   display: flex;
   align-items: center;
   gap: 12px;
-  justify-content: center;
 }
 
-.hero-content-center .hero-social-proof p {
-  color: rgba(255, 255, 255, 0.8);
+.hero-minimal-left .hero-social-proof p {
+  color: #6b7280;
   font-size: 0.9rem;
 }
 
-.hero-content-center .avatars img {
-  border: 2px solid rgba(255,255,255,0.2);
+.hero-minimal-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-floating-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Entry Animations (Dekhla) */
@@ -332,24 +307,32 @@ html, body {
   .mini-showcase-text { width: 100%; padding: 24px; }
   .mini-showcase-text h3 { font-size: 1.5rem; }
   
-  .hero-content-center .hero-title { 
-    font-size: 2.5rem !important; 
-    line-height: 1.2; 
-    margin-bottom: 16px; 
+  .hero-minimal {
+    padding: 100px 0 60px 0;
+    min-height: auto;
   }
-  .hero-content-center .hero-subtitle { 
-    font-size: 1rem !important; 
-    margin-bottom: 24px; 
-  }
-  .hero-fullscreen { 
-    min-height: 85vh; 
-  }
-  .hero-content-center { 
-    padding: 0 16px; 
-  }
-  .hero-content-center .hero-social-proof {
+  .hero-minimal-container {
     flex-direction: column;
     text-align: center;
+  }
+  .hero-minimal-left {
+    margin-bottom: 40px;
+  }
+  .hero-minimal-left .hero-title { 
+    font-size: 2.8rem; 
+  }
+  .hero-minimal-left .hero-actions {
+    justify-content: center;
+  }
+  .hero-minimal-left .hero-social-proof {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-minimal-right {
+    justify-content: center;
+  }
+  .hero-floating-img {
+    max-height: 350px;
   }
 }
 .img-anim-1 { opacity: 0; animation: scaleFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
