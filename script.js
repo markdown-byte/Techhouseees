@@ -283,13 +283,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================
   // 6. CATEGORY FILTERING & WISHLIST
   // =========================================
-  const categoryCards = document.querySelectorAll('.cat-feature-btn');
+  const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
 
-  categoryCards.forEach(card => {
-    card.addEventListener('click', (e) => {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const category = card.getAttribute('data-category');
+      
+      // Update active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const category = btn.getAttribute('data-category');
 
       // Filter products
       let found = false;
@@ -306,13 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       
-      // Smooth scroll to products section
-      const productsSection = document.getElementById('produits');
-      if(productsSection) {
-        productsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      
-      if(category) {
+      if(category && category !== 'all') {
         showToast(`Filtre appliqué : ${category.charAt(0).toUpperCase() + category.slice(1)}`);
       }
     });
