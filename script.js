@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================
   // 6. CATEGORY FILTERING & WISHLIST
   // =========================================
-  const categoryCards = document.querySelectorAll('.cat-card');
+  const categoryCards = document.querySelectorAll('.cat-feature-btn');
   const productCards = document.querySelectorAll('.product-card');
 
   categoryCards.forEach(card => {

@@ -124,44 +124,49 @@
     </div>
   </div>
 
-  <!-- ============ CATEGORIES SECTION ============ -->
-  <section class="section" id="categories">
+  <!-- ============ FEATURED CATEGORIES ============ -->
+  <section class="section" id="featured-categories">
     <div class="container">
-      <div class="section-header-row">
-        <h2 class="section-title">Shop by Categories</h2>
-        <a href="#" class="view-all">View All Categories &rarr;</a>
-      </div>
       
-      <div class="category-cards" id="categoryCards">
-        <div class="cat-card" data-category="airpods">
-          <img src="categorie/airpods.png" alt="Earbuds">
-          <div class="cat-info">
-            <h3>Audio</h3>
-            <a href="javascript:void(0);">Shop Now &rarr;</a>
-          </div>
+      <!-- Category 1: AirPods (Text Left, Image Right) -->
+      <div class="feature-row reveal-on-scroll">
+        <div class="feature-text">
+          <span class="feature-badge">Audio</span>
+          <h2>AirPods Pro</h2>
+          <p>Immersive sound, active noise cancellation, and a customizable fit. Experience music like never before with crystal clear quality and deep bass.</p>
+          <a href="#" class="btn btn-outline cat-feature-btn" data-category="airpods">Shop AirPods &rarr;</a>
         </div>
-        <div class="cat-card" data-category="chargeurs">
-          <img src="categorie/chargeurs.png" alt="Chargers">
-          <div class="cat-info">
-            <h3>Electronics</h3>
-            <a href="javascript:void(0);">Shop Now &rarr;</a>
-          </div>
-        </div>
-        <div class="cat-card" data-category="montres">
-          <img src="categorie/montres.png" alt="Watches">
-          <div class="cat-info">
-            <h3>Smart Watches</h3>
-            <a href="javascript:void(0);">Shop Now &rarr;</a>
-          </div>
-        </div>
-        <div class="cat-card" data-category="accessoires">
-          <img src="categorie/accessoires.png" alt="Accessories">
-          <div class="cat-info">
-            <h3>Accessories</h3>
-            <a href="javascript:void(0);">Shop Now &rarr;</a>
-          </div>
+        <div class="feature-img">
+          <img src="categorie/airpods.png" alt="AirPods Pro">
         </div>
       </div>
+
+      <!-- Category 2: Casques (Image Left, Text Right) -->
+      <div class="feature-row feature-row-reverse reveal-on-scroll">
+        <div class="feature-img">
+          <img src="categorie/casques.png" alt="Casques Premium">
+        </div>
+        <div class="feature-text">
+          <span class="feature-badge">Headphones</span>
+          <h2>Premium Casques</h2>
+          <p>Over-ear comfort designed for long sessions. High-fidelity audio that captures every detail of your favorite tracks without any distortion.</p>
+          <a href="#" class="btn btn-outline cat-feature-btn" data-category="casques">Shop Casques &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Category 3: Adapters (Text Left, Image Right) -->
+      <div class="feature-row reveal-on-scroll">
+        <div class="feature-text">
+          <span class="feature-badge">Accessories</span>
+          <h2>Fast Chargers & Adapters</h2>
+          <p>Power up your devices in minutes. Our premium adapters ensure safe, lightning-fast charging for all your essential tech gear.</p>
+          <a href="#" class="btn btn-outline cat-feature-btn" data-category="chargeurs">Shop Adapters &rarr;</a>
+        </div>
+        <div class="feature-img">
+          <img src="categorie/chargeurs.png" alt="Fast Chargers">
+        </div>
+      </div>
+
     </div>
   </section>
 
