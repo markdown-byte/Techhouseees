@@ -15,14 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nova.css" />
 </head>
 <body>
   <!-- Particle canvas removed -->
-
-  <!-- ============ ANNOUNCEMENT BAR ============ -->
-  <div class="announcement-bar">
-    <p>🚚 Livraison Gratuite partout au Maroc à partir de 500 DH d'achats !</p>
-  </div>
 
   <!-- ============ NAVBAR ============ -->
   <nav class="navbar" id="navbar">
@@ -32,21 +28,24 @@
           <span></span><span></span><span></span>
         </button>
         <a href="#" class="nav-logo">
-          <img src="logo.png" alt="TechHouse Logo" class="nav-logo-img" />
-          <span class="nav-logo-text">TECH<span class="accent">HOUSE</span></span>
+          <span class="nav-logo-text">Nova<span class="accent">Trend</span></span>
         </a>
       </div>
       
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#produits">Produits</a></li>
-        <li><a href="#pourquoi">Pourquoi Nous</a></li>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#produits">Shop</a></li>
+        <li><a href="#new-arrivals">New Arrivals</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
         <button class="action-btn" id="searchBtn" aria-label="Recherche">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <button class="action-btn" aria-label="Favoris">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
         </button>
         <button class="action-btn" id="userBtn" aria-label="Compte">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -61,39 +60,145 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-badge">Nouvelle Collection 2026</div>
-      <h1 class="hero-title">
-        L'accessoire <span class="gradient-text">parfait</span><br />
-        pour chaque device.
-      </h1>
-      <p class="hero-subtitle">
-        AirPods, casques, câbles, chargeurs — koulchi 3andna. Qualité premium, prix mzyan, livraison rapide partout au Maroc.
-      </p>
-      <div class="hero-actions">
-        <a href="#produits" class="btn btn-primary">
-          <span>Découvrir les produits</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="https://wa.me/212600000000" class="btn btn-outline" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.715-1.353A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.39-1.586l-.376-.236-3.294.945.882-3.468-.246-.39A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          <span>WhatsApp</span>
-        </a>
+    <div class="container hero-container">
+      <div class="hero-left">
+        <div class="hero-badge animate-in delay-1">TRENDING NOW</div>
+        <h1 class="hero-title animate-in delay-2">
+          Discover Products<br/>You'll Love
+        </h1>
+        <p class="hero-subtitle animate-in delay-3">
+          Shop the latest trending products curated for modern lifestyles. Quality accessories for everyday wear.
+        </p>
+        <div class="hero-actions animate-in delay-4">
+          <a href="#produits" class="btn btn-primary">
+            <span>Shop Now &rarr;</span>
+          </a>
+          <a href="#categories" class="btn btn-outline">
+            <span>Explore Collection</span>
+          </a>
+        </div>
+        <div class="hero-social-proof animate-in delay-5">
+          <div class="avatars">
+            <img src="https://i.pravatar.cc/150?img=32" alt="User 1">
+            <img src="https://i.pravatar.cc/150?img=12" alt="User 2">
+            <img src="https://i.pravatar.cc/150?img=47" alt="User 3">
+            <img src="https://i.pravatar.cc/150?img=5" alt="User 4">
+          </div>
+          <p>Loved by <strong>50,000+</strong> customers worldwide</p>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">2K+</span>
-          <span class="stat-label">Clients satisfaits</span>
+      <div class="hero-right intro-gallery">
+        <div class="gallery-col gallery-col-1">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" class="intro-img img-anim-1" alt="Headphones">
+          <img src="https://images.unsplash.com/photo-1546435770-a3e426fa4715?q=80&w=800&auto=format&fit=crop" class="intro-img img-anim-2" alt="AirPods">
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">500+</span>
-          <span class="stat-label">Produits livrés</span>
+        <div class="gallery-col gallery-col-2">
+          <img src="https://images.unsplash.com/photo-1612083896564-28b92b516b25?q=80&w=800&auto=format&fit=crop" class="intro-img img-anim-3" alt="Smartwatch">
+          <img src="https://images.unsplash.com/photo-1583394838173-19ac18ad6210?q=80&w=800&auto=format&fit=crop" class="intro-img img-anim-4" alt="Earphones">
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-number">4.9★</span>
-          <span class="stat-label">Avis clients</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div class="trust-text">
+          <strong>Free Shipping</strong>
+          <span>On orders over $50</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        <div class="trust-text">
+          <strong>Secure Payments</strong>
+          <span>100% secure checkout</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        <div class="trust-text">
+          <strong>Easy Returns</strong>
+          <span>30-day return policy</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <div class="trust-text">
+          <strong>24/7 Support</strong>
+          <span>Always here to help</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CATEGORIES SECTION ============ -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header-row">
+        <h2 class="section-title">Shop by Categories</h2>
+        <a href="#" class="view-all">View All Categories &rarr;</a>
+      </div>
+      
+      <div class="category-cards">
+        <div class="cat-card">
+          <img src="categorie/airpods.png" alt="Earbuds">
+          <div class="cat-info">
+            <h3>Audio</h3>
+            <a href="#">Shop Now &rarr;</a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img src="categorie/chargeurs.png" alt="Chargers">
+          <div class="cat-info">
+            <h3>Electronics</h3>
+            <a href="#">Shop Now &rarr;</a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img src="categorie/montres.png" alt="Watches">
+          <div class="cat-info">
+            <h3>Smart Watches</h3>
+            <a href="#">Shop Now &rarr;</a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img src="categorie/accessoires.png" alt="Accessories">
+          <div class="cat-info">
+            <h3>Accessories</h3>
+            <a href="#">Shop Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN SHOWCASE ============ -->
+  <section class="section design-showcase" id="showcase">
+    <div class="container">
+      <div class="section-header-row reveal-on-scroll">
+        <h2 class="section-title">Designed for Excellence</h2>
+        <p>Premium aesthetics meeting cutting-edge technology.</p>
+      </div>
+      
+      <div class="showcase-grid">
+        <div class="sc-item sc-item-1 reveal-on-scroll">
+          <img src="designe/IMG_6466.JPG" alt="Design Element 1">
+        </div>
+        <div class="sc-item sc-item-2 reveal-on-scroll delay-1">
+          <video autoplay loop muted playsinline>
+            <source src="designe/video1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="sc-item sc-item-3 reveal-on-scroll delay-2">
+          <img src="designe/IMG_6468.JPG" alt="Design Element 2">
+        </div>
+        <div class="sc-item sc-item-4 reveal-on-scroll delay-3">
+          <video autoplay loop muted playsinline>
+            <source src="designe/video2.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -102,41 +207,10 @@
   <!-- ============ PRODUCTS SECTION ============ -->
   <section class="section" id="produits">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Notre Catalogue</span>
-        <h2 class="section-title">Choisi ton <span class="gradient-text">accessoire</span></h2>
-        <p class="section-desc">Koulchi li khtajti l appareil dialek — qualité top, prix mnaسب.</p>
+      <div class="section-header-row">
+        <h2 class="section-title">New Arrivals</h2>
+        <a href="#" class="view-all">View All New Arrivals &rarr;</a>
       </div>
-
-      <!-- Category Filters -->
-            <div class="category-filters" id="categoryFilters">
-        <button class="filter-chip active" data-category="all">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-          Tout
-        </button>
-        <button class="filter-chip" data-category="airpods">
-          <img src="categorie/airpods.png" alt="AirPods" class="chip-img" />
-          AirPods
-        </button>
-        <button class="filter-chip" data-category="casques">
-          <img src="categorie/casques.png" alt="Casques" class="chip-img" />
-          Casques
-        </button>
-        <button class="filter-chip" data-category="chargeurs">
-          <img src="categorie/chargeurs.png" alt="Chargeurs" class="chip-img" />
-          Chargeurs
-        </button>
-        <button class="filter-chip" data-category="accessoires">
-          <img src="categorie/accessoires.png" alt="Accessoires" class="chip-img" />
-          Accessoires
-        </button>
-        <button class="filter-chip" data-category="montres">
-          <img src="categorie/montres.png" alt="Montres" class="chip-img" />
-          Montres
-        </button>
-      </div>
-
-      <!-- Product Grid -->
             <div class="product-grid" id="productGrid">
 
         <!-- Product 1: Oraimo FreePods Beige -->
@@ -144,6 +218,7 @@
           <div class="product-badge">Populaire</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_14.png" alt="Oraimo FreePods Beige" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -176,6 +251,7 @@
           <div class="product-badge sale">-30%</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_15.png" alt="Oraimo FreePods Noir" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -208,6 +284,7 @@
           <div class="product-badge">Nouveau</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_16.png" alt="Oraimo OpenPods Noir" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -239,6 +316,7 @@
         <div class="product-card" data-category="airpods">
           <div class="product-img-wrap">
             <img src="produit/image_copy_17.png" alt="Oraimo OpenPods Beige" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -271,6 +349,7 @@
           <div class="product-badge">Best Seller</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_8.png" alt="AirPods Pro 2" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -301,6 +380,7 @@
         <div class="product-card" data-category="airpods">
           <div class="product-img-wrap">
             <img src="produit/image_copy_24.png" alt="AirPods 3ème Génération" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -332,6 +412,7 @@
           <div class="product-badge">Premium</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_20.png" alt="Oraimo SoundWave Casque" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -363,6 +444,7 @@
           <div class="product-badge sale">-25%</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_21.png" alt="JBL Everest Wireless" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -394,6 +476,7 @@
           <div class="product-badge">Populaire</div>
           <div class="product-img-wrap">
             <img src="produit/image_copy_22.png" alt="Casque P9 Pro Max" />
+            <button class="wishlist-btn" title="Add to Wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
             <div class="product-img-actions">
               <button class="action-btn-circle quick-view-btn" title="Aperçu rapide">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -429,42 +512,33 @@
     </div>
   </section>
 
-  <!-- ============ POURQUOI NOUS ============ -->
-  <section class="section section-why" id="pourquoi">
+  <!-- ============ DUAL BANNERS ============ -->
+  <section class="section" id="banners">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">L'expérience TechHouse</span>
-        <h2 class="section-title">3lach <span class="gradient-text">TechHouse</span> ?</h2>
-        <p class="section-desc">Machi ghir boutique, hna partenaire dial tech dialek.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <div class="dual-banners">
+        <div class="banner banner-sale">
+          <div class="banner-content">
+            <span class="banner-tag">Flash Sale</span>
+            <h2>Up To 70% Off</h2>
+            <div class="countdown">
+              <div class="cd-item"><span class="cd-num">02</span><span class="cd-label">Days</span></div>
+              <div class="cd-item"><span class="cd-num">15</span><span class="cd-label">Hours</span></div>
+              <div class="cd-item"><span class="cd-num">45</span><span class="cd-label">Mins</span></div>
+              <div class="cd-item"><span class="cd-num">30</span><span class="cd-label">Secs</span></div>
+            </div>
+            <a href="#produits" class="btn-white">Shop Sale Now</a>
           </div>
-          <h3>Livraison Rapide</h3>
-          <p>Kat wselك l bab dar — partout au Maroc. Casablanca f 24h, باقي les villes f 48-72h.</p>
+          <img src="produit/image_copy_14.png" alt="Flash Sale Image">
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v4a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        
+        <div class="banner banner-new">
+          <div class="banner-content">
+            <span class="banner-tag">New Collection</span>
+            <h2>Summer 2026</h2>
+            <p>Discover the latest trends and fresh styles.</p>
+            <a href="#categories" class="btn-white">Shop Collection</a>
           </div>
-          <h3>Paiement à la Livraison</h3>
-          <p>Ma khss-ek tkhless 9bel. Khless غير ملي يوصلك le produit — zero risque.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Garantie & Qualité</h3>
-          <p>Koul produit 3andou garantie. Ila ma3jbekش chi haja — retour facile, بلا مشاكل.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <h3>Support 24/7</h3>
-          <p>3andek chi souال? Golna 3la WhatsApp, kanjibouk f d9i9a — service client li kayhتem bik.</p>
+          <img src="produit/image_copy_20.png" alt="New Collection Image">
         </div>
       </div>
     </div>
