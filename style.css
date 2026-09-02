@@ -915,6 +915,21 @@ img {
   }
 
   /* Nav mobile */
+  .nav-container {
+    padding: 0 12px;
+  }
+  .nav-left {
+    gap: 8px;
+  }
+  .nav-logo {
+    gap: 6px;
+  }
+  .nav-actions {
+    gap: 4px;
+  }
+  .nav-logo-text {
+    font-size: 1rem;
+  }
   .nav-toggle {
     display: flex;
   }
