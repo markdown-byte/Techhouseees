@@ -5,10 +5,10 @@
 /* ---- CSS Custom Properties ---- */
 :root {
   /* Colors - Oraimo Tech Dark Theme */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #141414;
-  --bg-card: #1a1a1a;
-  --bg-card-hover: #222222;
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-hover: #1a1a1a;
 
   --accent-primary: #84cc16; /* Oraimo Green */
   --accent-secondary: #ffffff;
@@ -113,10 +113,10 @@ img {
 }
 
 .navbar.scrolled {
-  background: rgba(251, 251, 253, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px) saturate(1.8);
   -webkit-backdrop-filter: blur(20px) saturate(1.8);
-  box-shadow: 0 1px 0 var(--border-subtle);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -170,7 +170,7 @@ img {
 
 .nav-links a:hover {
   color: var(--text-primary);
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-toggle {
@@ -307,7 +307,7 @@ img {
 }
 
 .btn-outline:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-color: #000;
   transform: translateY(-2px);
 }
@@ -434,7 +434,7 @@ img {
 
 .filter-chip:hover {
   color: var(--text-primary);
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-color: #000;
 }
 
@@ -1115,7 +1115,7 @@ img {
 }
 
 .action-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .cart-btn {
@@ -1661,9 +1661,69 @@ img {
 .hero {
   padding-top: calc(var(--nav-height) + 40px);
   padding-bottom: 80px;
-  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  background: var(--bg-primary);
   min-height: auto;
   display: block;
+}
+
+/* =========================================
+   SIMPLE MOBILE-FIRST HERO
+   ========================================= */
+.hero-simple {
+  padding: calc(var(--nav-height) + 60px) 24px 60px;
+  background: var(--bg-primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+.hero-simple-content {
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+.hero-simple-content .hero-badge {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-weight: 700;
+}
+.hero-simple-content .hero-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+.hero-simple-content .text-accent {
+  color: var(--accent-primary);
+}
+.hero-simple-content .hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.hero-simple-image {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-simple-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
+  animation: float 4s ease-in-out infinite;
 }
 .hero-container {
   display: grid;
