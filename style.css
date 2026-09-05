@@ -612,13 +612,15 @@ img {
 }
 
 .price-current {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.15rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
-  background: var(--gradient-main);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .price-old {
