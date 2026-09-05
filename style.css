@@ -24,7 +24,7 @@
   
   /* Spacing */
   --nav-height: 80px;
-  --section-padding: 80px;
+  --section-padding: 40px;
   --container-max: 1300px;
 
   /* Transitions */
@@ -910,7 +910,7 @@ img {
 /* Mobile */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 70px;
+    --section-padding: 30px;
     --nav-height: 60px;
   }
 
@@ -1691,18 +1691,18 @@ img {
    SIMPLE MOBILE-FIRST HERO
    ========================================= */
 .hero-simple {
-  padding: calc(var(--nav-height) + 60px) 24px 60px;
+  padding: calc(var(--nav-height) + 20px) 24px 30px;
   background: var(--bg-primary);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  min-height: auto;
 }
 .hero-simple-content {
   max-width: 650px;
-  margin: 0 auto 40px;
+  margin: 0 auto 24px;
 }
 .hero-simple-content .hero-badge {
   background: var(--bg-secondary);
@@ -1712,7 +1712,7 @@ img {
   border-radius: 30px;
   font-size: 0.85rem;
   letter-spacing: 2px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   display: inline-block;
   font-weight: 700;
 }
@@ -1721,7 +1721,7 @@ img {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: var(--text-primary);
 }
 .hero-simple-content .text-accent {
@@ -1729,7 +1729,7 @@ img {
 }
 .hero-simple-content .hero-subtitle {
   font-size: 1.1rem;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   color: var(--text-secondary);
   line-height: 1.6;
 }
