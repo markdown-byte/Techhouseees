@@ -375,3 +375,19 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
   }
 });
+
+// =========================================
+// WHATSAPP ORDERING
+// =========================================
+window.orderWhatsApp = function(btn) {
+  const card = btn.closest('.product-card');
+  const name = card.querySelector('.product-name').innerText;
+  const price = card.querySelector('.price-current').innerText;
+  const imgSrc = card.querySelector('.product-img-wrap img').src;
+  
+  const phone = "212694350619";
+  const message = `Bonjour, je veux commander ce produit:\n\n*Produit:* ${name}\n*Prix:* ${price}\n*Image:* ${imgSrc}\n\nMerci!`;
+  
+  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
+};

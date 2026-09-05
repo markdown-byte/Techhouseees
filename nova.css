@@ -168,8 +168,9 @@ html, body {
 }
 .product-bottom {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 12px;
 }
 .price-current {
@@ -185,24 +186,24 @@ html, body {
   font-size: 0.9rem;
   margin-left: 8px;
 }
-.btn-add-cart-wide {
-  width: 100%;
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border-subtle);
-  padding: 10px;
-  border-radius: var(--radius-md);
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
 }
-.btn-add-cart-wide:hover {
-  background: var(--accent-primary);
-  color: #000;
-  border-color: var(--accent-primary);
+.btn-whatsapp:hover {
+  background: #1eb956;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
 
