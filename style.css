@@ -10,17 +10,17 @@
   --bg-card: #111111;
   --bg-card-hover: #1a1a1a;
 
-  --accent-primary: #84cc16; /* Oraimo Green */
-  --accent-secondary: #ffffff;
+  --accent-primary: #ffffff; /* White Theme */
+  --accent-secondary: #000000;
   
   --text-primary: #f9fafb;
   --text-secondary: #a1a1aa;
   --text-muted: #52525b;
 
   --border-subtle: #27272a;
-  --border-glow: rgba(132, 204, 22, 0.2);
+  --border-glow: rgba(255, 255, 255, 0.2);
 
-  --gradient-main: #84cc16;
+  --gradient-main: #ffffff;
   
   /* Spacing */
   --nav-height: 80px;
@@ -294,15 +294,16 @@ img {
 }
 
 .btn-primary {
-  background: #000;
-  color: #fff;
+  background: var(--accent-primary);
+  color: #000;
   box-shadow: none;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #e5e5e5;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
 }
 
 .btn-outline {
