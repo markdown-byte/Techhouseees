@@ -137,15 +137,7 @@ html, body {
   border-color: var(--accent-primary);
 }
 .product-badge {
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border-radius: var(--radius-sm);
-  font-size: 0.7rem;
-  top: 12px;
-  left: 12px;
-  position: absolute;
-  padding: 4px 8px;
-  z-index: 2;
+  display: none;
 }
 .product-badge.sale {
   background: var(--accent-primary);
