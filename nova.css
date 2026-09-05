@@ -181,10 +181,7 @@ html, body {
   letter-spacing: -0.5px;
 }
 .price-old {
-  color: var(--text-muted);
-  text-decoration: line-through;
-  font-size: 0.9rem;
-  margin-left: 8px;
+  display: none;
 }
 .btn-whatsapp {
   background: #25D366;
