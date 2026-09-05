@@ -111,7 +111,7 @@ html, body {
 }
 .product-img-wrap {
   border-radius: var(--radius-lg);
-  background: var(--bg-secondary);
+  background: #ffffff; /* White background to blend seamlessly with product photos */
   padding: 24px;
   position: relative;
 }
@@ -173,9 +173,11 @@ html, body {
   margin-top: 12px;
 }
 .price-current {
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--accent-primary);
+  letter-spacing: -0.5px;
 }
 .price-old {
   color: var(--text-muted);
